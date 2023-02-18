@@ -1,0 +1,20 @@
+{
+  "name": "todos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "cd frontend && npm run build",
+    "watch": "cd frontend && npm run watch",
+	"postinstall": "cd frontend && npm install"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
