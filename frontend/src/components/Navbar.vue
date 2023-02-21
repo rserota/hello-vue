@@ -1,9 +1,11 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
 	<div id="navbar" class="py-2">
-		<h1><router-link to="/">To Do Today</router-link></h1>
+		<router-link to="/">Home <img class="logo" src="/cat.jpg"></router-link>
+		<router-link v-for="pageNum in [1,2]" :to="`/details/${pageNum}`">Page {{ pageNum }} </router-link>
 	</div>
 </template>
 
@@ -11,5 +13,11 @@
 	#navbar {
 		background-color: #339;
 		font-size: 2.5rem;
+	}
+
+	.logo {
+		height:40px;
+		width:40px;
+		border-radius: 999px;
 	}
 </style>

@@ -1,17 +1,17 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import ToDoPage from "./components/ToDoPage.vue";
-import TaskListPage from "./components/TaskListPage.vue";
+import HomePage from "./components/HomePage.vue";
+import DetailsPage from "./components/DetailsPage.vue";
 
 const routes = [
   {
     path: "/",
-    name: "ToDo",
-    component: ToDoPage,
+    name: "Home",
+    component: HomePage,
   },
   {
-    path: "/task-list/:todoID",
-    name: "TaskList",
-    component: TaskListPage,
+    path: "/details/:itemID",
+    name: "Details",
+    component: DetailsPage,
   },
 ];
 
