@@ -4,8 +4,8 @@ import { RouterLink } from 'vue-router';
 
 <template>
 	<div id="navbar" class="py-2">
-		<router-link to="/">Home <img class="logo" src="/cat.jpg"></router-link>
-		<router-link v-for="pageNum in [1,2]" :to="`/details/${pageNum}`">Page {{ pageNum }} </router-link>
+		<RouterLink class="mx-4" to="/">Home <img class="logo" src="/cat.jpg"></RouterLink>
+		<RouterLink class="mx-4" v-for="pageNum in [1,2]" :to="`/details/${pageNum}`">Page {{ pageNum }} </RouterLink>
 	</div>
 </template>
 
