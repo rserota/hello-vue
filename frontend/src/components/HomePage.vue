@@ -1,9 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useStore } from 'vuex';
-import axios from 'axios'
+import axios, { AxiosHeaders } from 'axios'
 
 const words = ref([])
+const fact = ref('')
 const store = useStore()
 
 onMounted(async () => {
@@ -16,6 +17,10 @@ onMounted(async () => {
 	setTimeout(()=>{
 		store.commit('addWord', {word:' world'})
 	}, 1500)
+
+	const response = await axios.get('https://cat-fact.herokuapp.com/facts/random')
+	fact.value = response.data.text
+	console.log(response)
 })
 
 
@@ -31,6 +36,7 @@ onMounted(async () => {
 	</div>
 
 	<div class="container">
+		<span>{{ fact }}</span>
 	</div>
 
 </template>
