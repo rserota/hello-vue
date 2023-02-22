@@ -12,7 +12,7 @@
     "start": "nodemon index.js",
     "build": "cd frontend && npm run build",
     "watch": "cd frontend && npm run watch",
-	"postinstall": "cd frontend && npm install"
+    "postinstall": "cd frontend && npm install"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
