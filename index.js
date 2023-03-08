@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
 	res.sendFile('./frontend/dist/index.html', {root: './'});
 })
 
+app.post('/test', (req, res)=>{
+	console.log('body? ', req.body)
+	res.send({ok:'ok'})
+})
 
 app.listen(PORT, () =>
 	console.log(`Raphael's app is listening on port ${PORT}!`)
